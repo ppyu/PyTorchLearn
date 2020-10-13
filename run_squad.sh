@@ -1,6 +1,7 @@
 export SQUAD_DIR=./datasets/squad
 
 python run_squad.py \
+  --squad_model bert_qa_model_squad \
   --model_type bert \
   --model_name_or_path bert-base-uncased \
   --do_train \
