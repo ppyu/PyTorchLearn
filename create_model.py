@@ -24,11 +24,11 @@ def create_model(args):
     if args.squad_model == 'bert_qa_model_squad':
         print('creating bert base model')
         model_class = bert_qa_model_squad
-    if args.squad_model == 'xx':
+    elif args.squad_model == 'xx':
         pass
         # model_class = xx
     else:
-        print('no model defined as ',args.squad_model)
+        print('no model defined as ', args.squad_model)
 
     model = model_class.from_pretrained(
         args.model_name_or_path,
@@ -36,4 +36,4 @@ def create_model(args):
         config=config,
         cache_dir=args.cache_dir if args.cache_dir else None,
     )
-    return model,config,tokenizer
+    return model, config, tokenizer
