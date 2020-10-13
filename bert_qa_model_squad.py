@@ -14,7 +14,7 @@ from torch.nn import CrossEntropyLoss
 class BertQAModelSquad(BertPreTrainedModel):
 
     def __init__(self, config):
-        super(BertQAModelSquad).__init__(config)
+        super(BertQAModelSquad, self).__init__(config)
         self.num_labels = config.num_labels
 
         self.bert = BertModel(config, add_pooling_layer=False)
