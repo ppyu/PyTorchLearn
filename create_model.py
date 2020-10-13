@@ -6,7 +6,7 @@
 @Description : Input your description here ... 
 """
 from transformers import AutoConfig, AutoTokenizer
-import bert_qa_model_squad
+from bert_qa_model_squad import BertQAModelSquad
 
 
 def create_model(args):
@@ -23,7 +23,7 @@ def create_model(args):
     model_class = None
     if args.squad_model == 'bert_qa_model_squad':
         print('creating bert base model')
-        model_class = bert_qa_model_squad
+        model_class = BertQAModelSquad
     elif args.squad_model == 'xx':
         pass
         # model_class = xx

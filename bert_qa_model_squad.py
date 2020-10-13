@@ -12,7 +12,6 @@ from torch.nn import CrossEntropyLoss
 
 
 class BertQAModelSquad(BertPreTrainedModel):
-    authorized_unexpected_keys = [r"pooler"]
 
     def __init__(self, config):
         super(BertQAModelSquad).__init__(config)
